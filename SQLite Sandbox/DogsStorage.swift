@@ -70,6 +70,7 @@ final class DogsStorage: Storing {
       statement += """
         `dog_id` INTEGER NOT NULL,
         `year` INTEGER NOT NULL,
+        FOREIGN KEY(`dog_id`) REFERENCES `\(Entity.dogs.rawValue)` (`id`),
       """
     }
     statement += "  PRIMARY KEY(`id`)\n);"
